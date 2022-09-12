@@ -1,0 +1,17 @@
+title 0.6
+
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/spa
+server-->browser: HTML-code
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.css
+server-->browser: main.css
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/spa.js
+server-->browser: spa.js
+browser-->server: GET data.json
+server-->browser: [{"content":"sekvenssikaavio","date":"2022-09-12T09:26:23.007Z"}..
+
+note over browser
+user adds new note and 
+saves it
+end note 
+browser-->server:HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note
+server-->browser: STATUS CODE 201

@@ -1,0 +1,14 @@
+title 0.4
+
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/notes
+server-->browser: HTML-code
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.css
+server-->browser: main.css
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.js
+server-->browser: main.js
+browser-->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/data.json
+server-->browser: [{"content":"sekvenssikaavio","date":"2022-09-12T09:26:23.007Z"}
+browser-->server: user write note on textfield and saves it
+server-->browser: redirect request
+browser-->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/notes
+server-->browser: GET new note,note,main.css,main.js,data.json; The new note will be seen on  notes
